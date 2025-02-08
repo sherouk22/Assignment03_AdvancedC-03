@@ -33,16 +33,18 @@ namespace Assignment03_AdvancedC_03
 
             #endregion
 
-            #region EX02
+            #region EX02 :
 
-            int[] number = [ 1, 2, 6, 3, 4, 5 , 8, 7 ];
-            Console.WriteLine(string.Join(" ,", number));
+            //int[] number = [ 1, 2, 6, 3, 4, 5, 8, 7];
 
-            SortingAlgorithm.BubbleSort(number);
 
-            Console.WriteLine(string.Join(" ,", number));
+            //SortingAlgorithm.BubbleSort(number , CompareTypes.CompareLessThan);
+
+            //Console.WriteLine(string.Join(" ,", number));
 
             #endregion
+
+
 
 
 
