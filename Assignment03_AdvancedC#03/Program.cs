@@ -132,6 +132,21 @@ namespace Assignment03_AdvancedC_03
 
             #endregion
 
+            #region We need to Implement the List methods from scratch with all overloads.
+
+
+            List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+
+            Console.WriteLine("Exist: " + ListMethods<int>.Exist(numbers, x => x == 5));
+            Console.WriteLine("Find: " + ListMethods<int>.Find(numbers, x => x > 2));
+            Console.WriteLine("FindAll: " + string.Join(", ", ListMethods<int>.FindAll(numbers, x => x > 1)));
+
+            Console.WriteLine("FindIndex: " + ListMethods<int>.FindIndex(numbers, x => x == 3));
+
+            Console.WriteLine("FindLast: " + ListMethods<int>.FindLast(numbers, x => x > 3));
+            Console.WriteLine("FindLastIndex: " + ListMethods<int>.FindLastIndex(numbers, x => x > 2)); 
+            #endregion
+
 
 
         }
