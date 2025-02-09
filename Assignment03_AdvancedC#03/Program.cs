@@ -60,12 +60,17 @@ namespace Assignment03_AdvancedC_03
 
             #region EX02 :
 
-            //int[] number = [ 1, 2, 6, 3, 4, 5, 8, 7];
+            int[] number = [1, 2, 6, 3, 4, 5, 8, 7];
 
-
-            //SortingAlgorithm.BubbleSort(number , CompareTypes.CompareLessThan);
+            //CompareTypesDelegate<int, int ,bool> Compare = CompareTypes.CompareLessThan;
+            //SortingAlgorithm<int>.BubbleSort(number, Compare);
 
             //Console.WriteLine(string.Join(" ,", number));
+
+            ////string[] names = ["sherouk", "mohy", "mohamed", "eman"];
+            ////CompareTypesDelegate<string> Compare = CompareTypes.CompareGreaterThan;
+            ////SortingAlgorithm<string>.BubbleSort(names, Compare);
+            ////Console.WriteLine(string.Join(" ,", names));
 
             #endregion
 
@@ -81,7 +86,51 @@ namespace Assignment03_AdvancedC_03
             #endregion
 
 
+            //Part 02:
+            #region 2.Considering the Code Below, Write Down the Body of all Listed Methods and Properties and Constructor:
 
+            Book book = new Book("100", "Advanced_C#", new string[] { "Ahmed", "Abdelrahman" }, new DateTime(2024, 1, 1), 200m);
+            List<Book> bookList = new List<Book>
+        {
+            new Book("100", "Advanced_C#", new string[] { "Ahmed", "Abdelrahman" }, new DateTime(2024, 1, 1), 200m),
+            new Book("200", "Advanced C++", new string[] { "mohamed" }, new DateTime(2025, 1, 1), 100m)
+        };
+
+            #endregion
+
+            #region Create User Defined Delegate with the same signature of methods existed in Bookfunctions class.
+
+            //LibraryEngine.ProcesBooks(bookList, BookFunctions.GetPrice);
+
+            #endregion
+
+            #region  Use the Proper build in delegate.
+
+
+            //Func<Book, string> func = BookFunctions.GetPrice;
+            //string output = func.Invoke(book);
+            //Console.WriteLine(output);
+            #endregion
+
+            #region Anonymous Method (GetISBN).
+            //BookDelegate bookDelegate = delegate (Book book1)
+            //{
+            //    return book1.ISBN;
+            //};
+
+            #endregion
+
+            #region  Lambda Expression (GetPublicationDate)
+
+            //BookDelegate bookDelegate = book => book.PublicationDate.ToUniversalTime().ToString();
+            //string output = bookDelegate.Invoke(book);
+            //Console.WriteLine(output);
+
+            //Func<Book, DateTime> func = book => book.PublicationDate;
+            //DateTime dateTime = func(book);
+            //Console.WriteLine(dateTime.ToString());
+
+            #endregion
 
 
 
